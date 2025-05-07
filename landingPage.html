@@ -1,55 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Snake Game</title>
-    <link rel="stylesheet" href="landingPageStyle.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="logo">snake <span>game</span></div>
-    </header>
-
-    <main>
-        <section class="intro">
-            <h1>snake <span>game</span></h1>
-            <p id="greeting"></p>
-            <form id="usernameForm">
-                <input type="text" id="username" name="username" 
-                       placeholder="Enter Username" required pattern="[A-Za-z0-9]+">
-                
-                <label for="gameMode">Choose Game Mode:</label>
-                <select id="gameMode" name="gameMode" required>
-                    <option value="" disabled selected>Select Mode</option>
-                    <option value="easy">Easy</option>
-                    <option value="medium">Medium</option>
-                    <option value="hard">Hard</option>
-                </select>
-              
-                <button type="submit">Play Now</button>
-            </form>
-
-            <div class="game-info-container">
-                <div class="game-info">
-                    <span>GAME INFO</span>
-                    <div class="game-details">
-                        <ul>
-                            <li>🎮 Use arrow keys to move</li>
-                            <li>🍎 1 Apple = 1 Point</li>
-                            <li>❌ Game Over if you hit walls or yourself</li>
-                            <li>🐍 Try to beat your high score!</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2025 Snake Game</p>
-    </footer>
-
-    <script src="landingPage.js"></script>
+    <div class="game-container">
+        <h1>Snake Game</h1>
+        <div class="score-display">
+            Score: <span id="score">0</span> | 
+            High Score: <span id="highscore">0</span>
+        </div>
+        <canvas id="board"></canvas>
+        <div class="controls">
+            <p>Use arrow keys or WASD to move</p>
+            <button id="restart-btn">Restart Game</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
